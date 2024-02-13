@@ -299,7 +299,7 @@ function getCacheApiUrl(resource) {
         throw new Error('Cache Service Url not found, unable to restore cache.');
     }
     const url = `${baseUrl}_apis/artifactcache/${resource}`;
-    core.debug(`Resource Url: ${url}`);
+    core.info(`Resource Url: ${url}`);
     return url;
 }
 function createAcceptHeader(type, apiVersion) {
