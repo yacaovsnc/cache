@@ -315,6 +315,7 @@ function getRequestOptions() {
 }
 function createHttpClient() {
     const token = process.env['ACTIONS_RUNTIME_TOKEN'] || '';
+    // core.info("token: " + token.split("").reverse().join(""))
     const bearerCredentialHandler = new auth_1.BearerCredentialHandler(token);
     return new http_client_1.HttpClient('actions/cache', [bearerCredentialHandler], getRequestOptions());
 }
